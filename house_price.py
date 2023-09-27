@@ -34,6 +34,8 @@ class Property_list_fetcher:
     else:
         print("Please enter a location.")
 
+if __name__ == "__main__":
+    main()
 
 
             
