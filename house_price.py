@@ -22,4 +22,18 @@ class Property_list_fetcher:
                     print("\n".join(listings_text))
                 else:
                     print(f"No property listings found for {location}")
+                  except Exception as e:
+                print(f"Error parsing data: {str(e)}")
+        else:
+            print(f"Failed to retrieve data from Magicbricks.com for {location}")
+          def main():
+    fetcher = Property_list_fetcher()
+    location = input("Enter the location: ")
+    if location:
+        fetcher.fetch_property_listings(location)
+    else:
+        print("Please enter a location.")
+
+
+
             
