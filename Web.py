@@ -106,6 +106,53 @@ class HousePriceChecker(QMainWindow):
 
         return state_prices_widget
 
+     def create_state_prices_view2(self):
+        state_prices_widget = QWidget(self)
+
+        layout = QVBoxLayout()
+
+        state_prices_label = QLabel("State-wise House Prices in India (City 2)")
+        layout.addWidget(state_prices_label)
+
+        self.city_combobox2 = QComboBox(self)
+        self.city_combobox2.addItem("Select State")
+        self.city_combobox2.addItems(state_data.keys())
+        layout.addWidget(self.city_combobox2)
+
+        self.district_combobox2 = QComboBox(self)
+        self.district_combobox2.addItem("Select City")
+        layout.addWidget(self.district_combobox2)
+
+        self.state_prices_text2 = QTextBrowser(self)
+        layout.addWidget(self.state_prices_text2)
+
+        compare_prices_button = QPushButton("Compare Prices", self)
+        compare_prices_button.clicked.connect(self.compare_prices)
+        layout.addWidget(compare_prices_button)
+
+        state_prices_widget.setLayout(layout)
+
+        # Connect the city_combobox2 to update district_combobox2
+        self.city_combobox2.currentIndexChanged.connect(self.update_district_combobox2)
+
+        return state_prices_widget
+
+    def update_district_combobox(self):
+        selected_city = self.city_combobox.currentText()
+        self.district_combobox.clear()
+        self.district_combobox.addItem("Select City")
+
+        if selected_city != "Select State":
+            self.district_combobox.addItems(state_data.get(selected_city, {}).keys())
+
+    def update_district_combobox2(self):
+        selected_city = self.city_combobox2.currentText()
+        self.district_combobox2.clear()
+        self.district_combobox2.addItem("Select City")
+
+        if selected_city != "Select State":
+            self.district_combobox2.addItems(state_data.get(selected_city, {}).keys())
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     main_window = HousePriceChecker()
