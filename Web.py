@@ -153,32 +153,7 @@ class HousePriceChecker(QMainWindow):
         if selected_city != "Select State":
             self.district_combobox2.addItems(state_data.get(selected_city, {}).keys())
 
-     def compare_prices(self):
-        selected_city1 = self.city_combobox.currentText()
-        selected_district1 = self.district_combobox.currentText()
-        selected_city2 = self.city_combobox2.currentText()
-        selected_district2 = self.district_combobox2.currentText()
-
-        if (
-            selected_city1 == "Select State" or selected_district1 == "Select City" or
-            selected_city2 == "Select State" or selected_district2 == "Select City"
-        ):
-            self.state_prices_text.setPlainText("Please select two cities and districts to compare house prices.")
-            self.state_prices_text2.setPlainText("")
-        else:
-            district_prices1 = state_data.get(selected_city1, {}).get(selected_district1, "Not Available")
-            formatted_prices1 = "\n".join(
-                [f"- {property_name}: {price}" for property_name, price in district_prices1.items()])
-
-            district_prices2 = state_data.get(selected_city2, {}).get(selected_district2, "Not Available")
-            formatted_prices2 = "\n".join(
-                [f"- {property_name}: {price}" for property_name, price in district_prices2.items()])
-
-            message1 = f"House Prices in {selected_district1}, {selected_city1}:\n{formatted_prices1}"
-            message2 = f"House Prices in {selected_district2}, {selected_city2}:\n{formatted_prices2}"
-
-            self.state_prices_text.setPlainText(message1)
-            self.state_prices_text2.setPlainText(message2)
+     
 
 
 if __name__ == "__main__":
