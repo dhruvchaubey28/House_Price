@@ -153,6 +153,25 @@ class HousePriceChecker(QMainWindow):
         if selected_city != "Select State":
             self.district_combobox2.addItems(state_data.get(selected_city, {}).keys())
 
+    def show_prices(self):
+        selected_city = self.city_combobox.currentText()
+        selected_district = self.district_combobox.currentText()
+
+        if selected_city == "Select State" or selected_district == "Select City":
+            self.state_prices_text.setPlainText("Please select a city and district to view house prices.")
+        else:
+            district_prices = state_data.get(selected_city, {}).get(selected_district, "Not Available")
+            formatted_prices = "\n".join(
+                [f"- {property_name}: {price}" for property_name, price in district_prices.items()])
+
+            message = f"House Prices in {selected_district}, {selected_city}:\n{formatted_prices}"
+            self.state_prices_text.setPlainText(message)
+
+        # Add user record to history list
+        user_record = f" -> {selected_city}, {selected_district}"
+        item = QListWidgetItem(user_record)
+        self.history_list.addItem(item)
+
      
 
 
