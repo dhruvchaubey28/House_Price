@@ -1,4 +1,5 @@
 import sys
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel,
     QTextBrowser, QComboBox, QListWidget, QListWidgetItem
@@ -74,6 +75,11 @@ class HousePriceChecker(QMainWindow):
 
         self.state_prices_view2 = self.create_state_prices_view2()
         self.central_layout.addWidget(self.state_prices_view2)
+
+        self.name_label = QLabel("Credits: Dhruv & Ashlee", self)
+        self.name_label.setAlignment(Qt.AlignRight | Qt.AlignBottom)
+
+        self.central_layout.addWidget(self.name_label)
 
     def create_state_prices_view(self):
         state_prices_widget = QWidget(self)
