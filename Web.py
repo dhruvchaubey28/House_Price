@@ -37,7 +37,63 @@ state_data = {
             "5 BHK House for Sale in Raj Heritage,Ponda": "1.30 Cr",
         },
     },
+    "Gujarat": {
+        "Ahmedabad": {
+            "2 BHK Apartment for Sale in Satellite": "1.15 Cr",
+            "3 BHK Villa for Sale in Bodakdev": "1.80 Cr",
+            "4 BHK Apartment for Sale in Prahladnagar": "1.50 Cr",
+            "2 BHK Flat for Sale in Vastrapur": "1.05 Cr",
+            "3 BHK Penthouse for Sale in Gota": "2.15 Cr",
+            "4 BHK Villa for Sale in Thaltej": "2.75 Cr",
+            "3 BHK Villa for Sale in Ahmedabad": "1.20 Cr",
+            "2 BHK Flat for Sale in Ahmedabad": "85 Lakh",
+        },
+        "Surat": {
+            "2 BHK Apartment for Sale in Surat": "80 Lakh",
+            "3 BHK Villa for Sale in Surat": "1.10 Cr",
+            "2 BHK Apartment for Sale in Adajan": "95 Lakh",
+            "3 BHK Villa for Sale in Vesu": "1.40 Cr",
+            "4 BHK Apartment for Sale in Piplod": "1.20 Cr",
+            "2 BHK Flat for Sale in Varachha": "88 Lakh",
+            "3 BHK Penthouse for Sale in Parle Point": "1.55 Cr",
+            "4 BHK Villa for Sale in Dumas": "2.25 Cr",
+        },
+        "Vadodara": {
+            "2 BHK Apartment for Sale in Vadodara": "75 Lakh",
+            "2 BHK Apartment for Sale in Alkapuri": "1.08 Cr",
+            "3 BHK Villa for Sale in Fatehgunj": "1.55 Cr",
+            "4 BHK Apartment for Sale in Karelibaug": "1.35 Cr",
+            "2 BHK Flat for Sale in Akota": "98 Lakh",
+            "3 BHK Penthouse for Sale in Vasna Road": "1.65 Cr",
+            "4 BHK Villa for Sale in Ajwa Road": "2.55 Cr",
+            "3 BHK Villa for Sale in Vadodara": "95 Lakh",
+        },
+    },
+    "Haryana": {
+        "Chandigarh": {
+            "2 BHK Apartment for Sale in Chandigarh": "1.05 Cr",
+            "2 BHK Apartment for Sale in Zirakpur": "1.15 Cr",
+            "3 BHK Villa for Sale in Mohali": "1.60 Cr",
+            "4 BHK Apartment for Sale in Panchkula": "1.85 Cr",
+            "2 BHK Flat for Sale in Sector 35": "1.10 Cr",
+            "3 BHK Penthouse for Sale in Sector 22": "2.25 Cr",
+            "4 BHK Villa for Sale in Kharar": "2.95 Cr",
+            "3 BHK Villa for Sale in Chandigarh": "1.40 Cr",
+        },
+        "Faridabad": {
+            "2 BHK Apartment for Sale in Faridabad": "80 Lakh",
+            "2 BHK Apartment for Sale in Sector 14": "85 Lakh",
+            "3 BHK Villa for Sale in Sector 21": "1.25 Cr",
+            "4 BHK Apartment for Sale in Sector 37": "1.40 Cr",
+            "2 BHK Flat for Sale in Sector 48": "90 Lakh",
+            "3 BHK Penthouse for Sale in Sector 30": "1.75 Cr",
+            "4 BHK Villa for Sale in Sector 16": "2.10 Cr",
+            "3 BHK Villa for Sale in Faridabad": "1.10 Cr",
+        },
+    },
 }
+    
+
 
 
 import sys
